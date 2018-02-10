@@ -10,6 +10,11 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!-- Javascript Files -->
+        <script src="/js/manifest.js"></script>
+        <script src="/js/vendor.js"></script>
+        <script src="/js/app.js"></script>
+
         <!-- Styles -->
         <style>
             html, body {

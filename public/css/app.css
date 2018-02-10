@@ -10004,3 +10004,30 @@ body {
   margin: 0;
 }
 
+.wedstrijdleider table.lifters {
+  text-align: center;
+}
+
+.wedstrijdleider table.lifters td {
+  vertical-align: middle;
+  height: 60px;
+  width: 70px;
+  padding: 0;
+}
+
+.wedstrijdleider table.lifters td form {
+  display: inline-block;
+  margin: auto;
+}
+
+.wedstrijdleider table.lifters td input {
+  width: 45px;
+  padding: 5px !important;
+  text-align: center;
+}
+
+.wedstrijdleider table.lifters td a {
+  display: block;
+  padding: 0.75rem;
+}
+

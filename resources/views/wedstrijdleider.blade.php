@@ -19,14 +19,14 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container">
+<div class="container wedstrijdleider">
     <h1 class="display-4">Beginnerswedstrijd 2018</h1>
 
 
     @if (count($lifters) == 0)
         <p>Er zijn geen lifters ingevoerd</p>
     @else
-        <table class="table lifters">
+        <table class="table table-hover lifters">
             <thead>
             <tr>
                 <th scope="colgroup">Naam</th>

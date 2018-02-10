@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Beginnerswedstrijd 2018</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -20,10 +20,8 @@
     </head>
     <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-4">Editable demo</h1>
-            <a href="#" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">Edit me!</a>
-        </div>
+        <h1 class="display-4">Beginnerswedstrijd 2018</h1>
+        <a href="#" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">Edit me!</a>
     </div>
     </body>
 </html>

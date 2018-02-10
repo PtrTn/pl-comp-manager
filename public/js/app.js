@@ -1,22 +1,31 @@
-webpackJsonp([0],[
-/* 0 */
+webpackJsonp([1],{
+
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-module.exports = __webpack_require__(2);
+__webpack_require__(66);
+module.exports = __webpack_require__(67);
 
 
 /***/ }),
-/* 1 */
+
+/***/ 66:
 /***/ (function(module, exports) {
 
-
+jQuery(document).ready(function () {
+    $.fn.editable.defaults.mode = 'inline';
+    $.fn.editable.defaults.showbuttons = false;
+    $.fn.editable.defaults.onblur = 'submit';
+    jQuery('#username').editable();
+});
 
 /***/ }),
-/* 2 */
+
+/***/ 67:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-],[0]);
+
+},[65]);

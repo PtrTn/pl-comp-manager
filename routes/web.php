@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', array(
+    'as' => 'home',
+    'uses' => 'WedstrijdleiderController@showLifts'
+));

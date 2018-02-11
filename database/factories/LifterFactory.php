@@ -5,15 +5,56 @@ use Faker\Generator as Faker;
 
 $factory->define(Lifter::class, function (Faker $faker) {
     return [
-        'naam' => str_random(rand(5, 10)) . ' ' . str_random(rand(5, 10)),
-        'squat1' => rand(100, 300),
-        'squat2' => rand(100, 300),
-        'squat3' => null,
-        'bench1' => rand(100, 300),
-        'bench2' => rand(100, 300),
-        'bench3' => null,
-        'deadlift1' => rand(100, 300),
-        'deadlift2' => rand(100, 300),
-        'deadlift3' => null,
+        'naam'      => getRandomName(),
+        'squat1'    => getRandomLift(),
+        'squat2'    => getRandomLift(),
+        'squat3'    => getRandomLift(),
+        'bench1'    => getRandomLift(),
+        'bench2'    => getRandomLift(),
+        'bench3'    => getRandomLift(),
+        'deadlift1' => getRandomLift(),
+        'deadlift2' => getRandomLift(),
+        'deadlift3' => getRandomLift(),
     ];
 });
+
+function getRandomName(): string
+{
+    $firstName = array_random([
+        'Vito',
+        'Tymen',
+        'Erik',
+        'Karel',
+        'Yvonne',
+        'Jurri',
+        'Peter',
+        'Cemil',
+        'Kenley'
+    ]);
+    $lastName = array_random([
+        'Minheere',
+        'Gerestein',
+        'Smallegange',
+        'Kodde',
+        'Kortsmit',
+        'Gerritsen',
+        'Ton',
+        'Car',
+        'Simons',
+    ]);
+
+    return $firstName . ' ' . $lastName;
+}
+
+function getRandomLift(): ?float
+{
+    return array_random([
+        null,
+        100,
+        120,
+        140,
+        160,
+        200,
+        300
+    ]);
+}

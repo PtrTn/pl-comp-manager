@@ -19,8 +19,14 @@ jQuery(document).ready(function () {
     $.fn.editable.defaults.emptytext = '-';
 
     $('table.lifters tbody td a').each(function () {
-        var $this = $(this);
-        $this.editable();
+        var $this = $(this),
+            pk = $this.closest('tr').data('pk');
+
+        $this.editable({
+            type: 'text',
+            pk: pk,
+            url: '/api/lifter'
+        });
     });
 });
 

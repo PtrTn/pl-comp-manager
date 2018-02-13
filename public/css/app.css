@@ -10004,30 +10004,40 @@ body {
   margin: 0;
 }
 
-.wedstrijdleider table.lifters {
+.wedstrijd table.lifters,
+.lifters table.lifters {
   text-align: center;
 }
 
-.wedstrijdleider table.lifters td {
+.wedstrijd table.lifters td,
+.lifters table.lifters td {
   vertical-align: middle;
   height: 60px;
   width: 70px;
   padding: 0;
 }
 
-.wedstrijdleider table.lifters td form {
+.wedstrijd table.lifters td form,
+.lifters table.lifters td form {
   display: inline-block;
   margin: auto;
 }
 
-.wedstrijdleider table.lifters td input {
+.wedstrijd table.lifters td a,
+.lifters table.lifters td a {
+  display: block;
+  padding: 0.75rem;
+}
+
+.wedstrijd table.lifters td input,
+.lifters table.lifters td input {
   width: 45px;
   padding: 5px !important;
   text-align: center;
 }
 
-.wedstrijdleider table.lifters td a {
-  display: block;
-  padding: 0.75rem;
+.wedstrijd table.lifters td.autoWidth input,
+.lifters table.lifters td.autoWidth input {
+  width: auto;
 }
 

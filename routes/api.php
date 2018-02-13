@@ -19,5 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/lift', array(
     'as' => 'lift',
-    'uses' => 'WedstrijdApiController@updateLifter'
+    'uses' => 'WedstrijdApiController@updateLift'
+));
+
+Route::post('/lifter', array(
+    'as' => 'lifter',
+    'uses' => 'LifterApiController@updateLifter'
 ));

@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Lifter extends Model
 {
     protected $fillable = [
+        'naam',
+        'gewichtsklasse',
+        'bodyweight',
+        'rekHoogteSquat',
+        'rekHoogteBench',
         'squat1',
         'squat2',
         'squat3',

@@ -15,3 +15,8 @@ Route::get('/wedstrijd', array(
     'as' => 'wedstrijd',
     'uses' => 'WedstrijdController@showLifts'
 ));
+
+Route::get('/lifters', array(
+    'as' => 'lifters',
+    'uses' => 'LifterController@showLifters'
+));

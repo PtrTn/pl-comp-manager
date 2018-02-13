@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Lifter;
 use Illuminate\Http\Request;
 
-class WedstrijdApiController extends Controller
+class LifterApiController extends Controller
 {
-    public function updateLift(Request $request)
+    public function updateLifter(Request $request)
     {
         $id = $request->request->get('pk');
         $name = $request->request->get('name');

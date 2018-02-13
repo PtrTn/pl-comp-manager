@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Lifter;
 use Illuminate\Http\Request;
 
-class WedstrijdleiderApiController extends Controller
+class WedstrijdApiController extends Controller
 {
     public function updateLifter(Request $request)
     {

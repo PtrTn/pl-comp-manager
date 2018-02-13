@@ -29,7 +29,7 @@ jQuery(document).ready(function () {
         $editable.editable({
             type: 'text',
             pk: pk,
-            url: '/api/lifter'
+            url: '/api/lift'
         });
 
         $editable.on('hidden', function (e, reason) {

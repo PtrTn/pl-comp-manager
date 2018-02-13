@@ -9,9 +9,10 @@ class WedstrijdController extends Controller
     public function showLifts()
     {
         $lifters = Lifter::all();
-        
+
         return View(
-            'wedstrijd', [
+            'wedstrijd',
+            [
                 'lifters' => $lifters
             ]
         );

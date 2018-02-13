@@ -12,7 +12,7 @@
             @if (count($lifters) == 0)
                 <p>Er zijn geen lifters ingevoerd</p>
             @else
-                <table class="table table-hover lifters">
+                <table class="table lifters">
                     <thead>
                     <tr>
                         <th scope="colgroup">Naam</th>

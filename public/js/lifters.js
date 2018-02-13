@@ -39,10 +39,15 @@ jQuery(document).ready(function () {
     });
 
     $('.newLifter a').editable({
-        type: 'text'
+        type: 'text',
+        name: 'naam',
+        emptytext: 'Klik om nog een lifter toe te voegen'
     });
 
-    $('.newLifter button').on('click', function () {
+    $('.newLifter a').on('hidden', function (e, reason) {
+        if (reason !== 'save') {
+            return;
+        }
 
         $('.newLifter a').editable('submit', {
             ajaxOptions: {

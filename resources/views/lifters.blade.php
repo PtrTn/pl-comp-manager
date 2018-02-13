@@ -24,6 +24,7 @@
                             <th scope="col">Squat 1</th>
                             <th scope="col">Bench 1</th>
                             <th scope="col">Deadlift 1</th>
+                            <th scope="col"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -37,23 +38,15 @@
                                 <td><a class="editable" href="#" data-name="squat1">{{ $lifter->squat1 }}</a></td>
                                 <td><a class="editable" href="#" data-name="bench1">{{ $lifter->bench1 }}</a></td>
                                 <td><a class="editable" href="#" data-name="deadlift1">{{ $lifter->deadlift1 }}</a></td>
+                                <td><a href="{{ route('delete.lifter', $lifter) }}"><i class="fa fa-trash-o text-danger" aria-hidden="true"></i></a></td>
                             </tr>
                         @endforeach
+                        <tr class="newLifter">
+                            <td colspan="9" class="autoWidth"><a href="#" data-name="naam"></a></td>
+                        </tr>
                         </tbody>
                     </table>
                 @endif
-            </div>
-        </div>
-        <div class="row newLifter">
-            <div class="col-md-6">
-                <h2>Lifter toevoegen</h2>
-                <table class="table">
-                    <tr>
-                        <td>Naam</td>
-                        <td><a href="#" data-name="naam"></a></td>
-                    </tr>
-                </table>
-                <button class="btn btn-primary float-right">Toevoegen</button>
             </div>
         </div>
     </div>

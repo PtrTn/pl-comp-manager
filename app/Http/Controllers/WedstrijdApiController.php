@@ -16,7 +16,7 @@ class WedstrijdApiController extends Controller
         /** @var Lifter|null $lifter */
         $lifter = Lifter::find($id);
 
-        if(!isset($id, $name, $value, $lifter)) {
+        if(!isset($id, $name, $lifter)) {
             return response()->json([], 400);
         }
 

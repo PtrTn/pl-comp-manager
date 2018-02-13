@@ -17,4 +17,10 @@ class LifterController extends Controller
             ]
         );
     }
+
+    public function deleteLifter(Lifter $lifter)
+    {
+        $lifter->delete();
+        return redirect()->back();
+    }
 }

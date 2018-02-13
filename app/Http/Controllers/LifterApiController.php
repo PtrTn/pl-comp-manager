@@ -43,10 +43,4 @@ class LifterApiController extends Controller
 
         return response()->json([]);
     }
-
-    public function deleteLifter(Lifter $lifter)
-    {
-        $lifter->delete();
-        return redirect()->back(); // todo, ajax.
-    }
 }

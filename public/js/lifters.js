@@ -55,10 +55,10 @@ jQuery(document).ready(function () {
                 dataType: 'json' //assuming json response
             },
             success: function success(data, config) {
-                console.log('succes!');
+                window.location.reload(false);
             },
             error: function error(errors) {
-                console.log('error');
+                $(this).after('<div class="alert alert-danger" role="alert"><strong>Er is iets fout gegaan!</strong> Probeer het nog eens.</div>');
             }
         });
     });

@@ -20,3 +20,8 @@ Route::get('/lifters', array(
     'as' => 'lifters',
     'uses' => 'LifterController@showLifters'
 ));
+
+Route::get('/lifter/delete/{lifter}', array(
+    'as' => 'delete.lifter',
+    'uses' => 'LifterController@deleteLifter'
+));

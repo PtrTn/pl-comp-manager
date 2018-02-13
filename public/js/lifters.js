@@ -19,7 +19,7 @@ jQuery(document).ready(function () {
 
     $('table.lifters tbody td').each(function () {
         var $td = $(this),
-            $editable = $td.find('a'),
+            $editable = $td.find('a.editable'),
             pk = $td.closest('tr').data('pk'),
             cellIndex = $td.index(),
             $nextTd = $td.closest('tr').next().children('td').eq(cellIndex),

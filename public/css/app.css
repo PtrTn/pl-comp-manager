@@ -10037,13 +10037,13 @@ body {
 
 .wedstrijd table td input,
 .lifters table td input {
-  width: 45px;
+  width: 45px !important;
   padding: 5px !important;
   text-align: center;
 }
 
 .wedstrijd table td.autoWidth input,
 .lifters table td.autoWidth input {
-  width: auto;
+  width: auto !important;
 }
 

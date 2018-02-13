@@ -40,12 +40,12 @@ html, body {
         }
       }
       input {
-        width: 45px;
+        width: 45px !important;
         padding: 5px !important;
         text-align: center;
       }
       &.autoWidth input {
-        width: auto;
+        width: auto !important;;
       }
     }
   }

@@ -38,15 +38,15 @@
                         @foreach ($lifters as $lifter)
                             <tr data-pk="{{ $lifter->id }}">
                                 <td>{{ $lifter->naam }}</td>
-                                <td><a href="#" data-name="squat1">{{ $lifter->squat1 }}</a></td>
-                                <td><a href="#" data-name="squat2">{{ $lifter->squat2 }}</a></td>
-                                <td><a href="#" data-name="squat3">{{ $lifter->squat3 }}</a></td>
-                                <td><a href="#" data-name="bench1">{{ $lifter->bench1 }}</a></td>
-                                <td><a href="#" data-name="bench2">{{ $lifter->bench2 }}</a></td>
-                                <td><a href="#" data-name="bench3">{{ $lifter->bench3 }}</a></td>
-                                <td><a href="#" data-name="deadlift1">{{ $lifter->deadlift1 }}</a></td>
-                                <td><a href="#" data-name="deadlift2">{{ $lifter->deadlift2 }}</a></td>
-                                <td><a href="#" data-name="deadlift3">{{ $lifter->deadlift3 }}</a></td>
+                                <td><a class="editable" href="#" data-name="squat1">{{ $lifter->squat1 }}</a></td>
+                                <td><a class="editable" href="#" data-name="squat2">{{ $lifter->squat2 }}</a></td>
+                                <td><a class="editable" href="#" data-name="squat3">{{ $lifter->squat3 }}</a></td>
+                                <td><a class="editable" href="#" data-name="bench1">{{ $lifter->bench1 }}</a></td>
+                                <td><a class="editable" href="#" data-name="bench2">{{ $lifter->bench2 }}</a></td>
+                                <td><a class="editable" href="#" data-name="bench3">{{ $lifter->bench3 }}</a></td>
+                                <td><a class="editable" href="#" data-name="deadlift1">{{ $lifter->deadlift1 }}</a></td>
+                                <td><a class="editable" href="#" data-name="deadlift2">{{ $lifter->deadlift2 }}</a></td>
+                                <td><a class="editable" href="#" data-name="deadlift3">{{ $lifter->deadlift3 }}</a></td>
                             </tr>
                         @endforeach
                         </tbody>

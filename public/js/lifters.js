@@ -37,6 +37,26 @@ jQuery(document).ready(function () {
             }
         });
     });
+
+    $('.newLifter a').editable({
+        type: 'text'
+    });
+
+    $('.newLifter button').on('click', function () {
+
+        $('.newLifter a').editable('submit', {
+            ajaxOptions: {
+                url: '/api/lifter/add',
+                dataType: 'json' //assuming json response
+            },
+            success: function success(data, config) {
+                console.log('succes!');
+            },
+            error: function error(errors) {
+                console.log('error');
+            }
+        });
+    });
 });
 
 /***/ })

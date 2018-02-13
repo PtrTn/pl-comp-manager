@@ -23,5 +23,27 @@ jQuery(document).ready(function () {
                 $nextEditable.editable('show');
             }
         });
-    })
+    });
+
+
+    $('.newLifter a').editable({
+        type: 'text',
+    });
+
+
+    $('.newLifter button').on('click', function() {
+
+        $('.newLifter a').editable('submit', {
+            ajaxOptions: {
+                url: '/api/lifter/add',
+                dataType: 'json' //assuming json response
+            },
+            success: function (data, config) {
+                console.log('succes!');
+            },
+            error: function (errors) {
+                console.log('error');
+            }
+        });
+    });
 });

@@ -30,4 +30,17 @@ class LifterApiController extends Controller
 
         return response()->json([]);
     }
+
+    public function addLifter(Request $request)
+    {
+        $value = $request->request->get('value');
+        if (!isset($value)) {
+            return response()->json([], 400);
+        }
+
+        $lifter = Lifter::create(['naam' => $value]);
+        $lifter->save();
+
+        return response()->json([]);
+    }
 }

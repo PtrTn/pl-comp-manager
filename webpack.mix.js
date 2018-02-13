@@ -11,6 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.disableNotifications();
+
 mix.webpackConfig({
     resolve: {
         alias: {

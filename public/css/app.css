@@ -10000,50 +10000,50 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.wedstrijd table.lifters,
-.lifters table.lifters {
+.wedstrijd table,
+.lifters table {
   text-align: center;
 }
 
-.wedstrijd table.lifters td,
-.lifters table.lifters td {
+.wedstrijd table td,
+.lifters table td {
   vertical-align: middle;
   height: 60px;
   width: 70px;
   padding: 0;
 }
 
-.wedstrijd table.lifters td:hover,
-.lifters table.lifters td:hover {
+.wedstrijd table td:hover,
+.lifters table td:hover {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
-.wedstrijd table.lifters td form,
-.lifters table.lifters td form {
+.wedstrijd table td form,
+.lifters table td form {
   display: inline-block;
   margin: auto;
 }
 
-.wedstrijd table.lifters td a,
-.lifters table.lifters td a {
+.wedstrijd table td a,
+.lifters table td a {
   display: block;
   padding: 0.75rem;
 }
 
-.wedstrijd table.lifters td a:hover,
-.lifters table.lifters td a:hover {
+.wedstrijd table td a:hover,
+.lifters table td a:hover {
   text-decoration: none;
 }
 
-.wedstrijd table.lifters td input,
-.lifters table.lifters td input {
+.wedstrijd table td input,
+.lifters table td input {
   width: 45px;
   padding: 5px !important;
   text-align: center;
 }
 
-.wedstrijd table.lifters td.autoWidth input,
-.lifters table.lifters td.autoWidth input {
+.wedstrijd table td.autoWidth input,
+.lifters table td.autoWidth input {
   width: auto;
 }
 

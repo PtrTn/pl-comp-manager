@@ -5,7 +5,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Lifter::class, function (Faker $faker) {
     return [
+        'lotnummer'      => rand(1, 50),
         'naam'           => getRandomName(),
+        'leeftijd'       => rand(18, 30),
         'gewichtsklasse' => getRandomGewichtsklasse(),
         'bodyweight'     => getRandomBodyweight(),
         'rekHoogteSquat' => getRandomRekhoogte(),
@@ -54,13 +56,13 @@ function getRandomGewichtsklasse()
 {
     return array_random([
         null,
-        '56',
-        '63',
-        '74',
-        '83',
-        '105',
-        '120',
-        '120+',
+        '56kg',
+        '63kg',
+        '74kg',
+        '83kg',
+        '105kg',
+        '120kg',
+        '+120kg',
     ]);
 }
 

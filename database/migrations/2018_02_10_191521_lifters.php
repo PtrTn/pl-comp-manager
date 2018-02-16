@@ -15,7 +15,9 @@ class Lifters extends Migration
     {
         Schema::create('lifters', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('lotnummer')->nullable();
             $table->string('naam', 128);
+            $table->integer('leeftijd')->nullable();
             $table->string('gewichtsklasse')->nullable();
             $table->float('bodyweight')->nullable();
             $table->integer('rekHoogteSquat')->nullable();

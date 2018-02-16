@@ -13,7 +13,6 @@ jQuery(document).ready(function () {
             $nextEditable = $nextTd.find('a');
 
         $editable.editable({
-            type: 'text',
             pk: pk,
             url: '/api/lifter'
         });
@@ -52,3 +51,5 @@ jQuery(document).ready(function () {
         });
     });
 });
+
+[{text: 'Vrouwen', children: ['47kg', '52kg', '57kg', '63kg', '72kg', '84kg', '+84kg']}]

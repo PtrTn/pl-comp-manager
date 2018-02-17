@@ -20,15 +20,26 @@ class LifterApiController extends Controller
             return response()->json([], 400);
         }
 
-        $whitelist = $lifter->getFillable();
-        if (!in_array($name, $whitelist)) {
-            return response()->json([], 400);
+        if (in_array($name, $this->lifterProperties())) {
+            $lifter->$name = $value;
+            $lifter->save();
+            return response()->json([]);
         }
 
-        $lifter->$name = $value;
-        $lifter->save();
+        if (in_array($name, $this->beurtProperties())) {
+            $beurt = $lifter->beurten()->firstOrCreate([
+                'lift' => substr($name, 0, -1),
+                'beurtnummer' => substr($name, -1),
+            ]);
+            $beurt->update([
+               'gewicht' => $value,
+               'gehaald' => false,
+            ]);
+            $lifter->beurten()->save($beurt);
+            return response()->json([]);
+        }
 
-        return response()->json([]);
+        return response()->json([], 400);
     }
 
     public function addLifter(Request $request)
@@ -42,5 +53,34 @@ class LifterApiController extends Controller
         $lifter->save();
 
         return response()->json([]);
+    }
+
+    private function lifterProperties() {
+        return [
+            'lotnummer',
+            'naam',
+            'leeftijd',
+            'gewichtsklasse',
+            'bodyweight',
+            'rekHoogteSquat',
+            'rekHoogteBench'
+        ];
+    }
+
+    private function beurtProperties() {
+        return [
+          'squat1',
+          'squat2',
+          'squat3',
+          'squat4',
+          'bench1',
+          'bench2',
+          'bench3',
+          'bench4',
+          'deadlift1',
+          'deadlift2',
+          'deadlift3',
+          'deadlift4',
+        ];
     }
 }

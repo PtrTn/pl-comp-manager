@@ -13,15 +13,11 @@ class Lifter extends Model
         'gewichtsklasse',
         'bodyweight',
         'rekHoogteSquat',
-        'rekHoogteBench',
-        'squat1',
-        'squat2',
-        'squat3',
-        'bench1',
-        'bench2',
-        'bench3',
-        'deadlift1',
-        'deadlift2',
-        'deadlift3',
+        'rekHoogteBench'
     ];
+
+    public function beurten()
+    {
+        return $this->hasMany(Beurt::class);
+    }
 }

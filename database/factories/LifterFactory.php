@@ -1,5 +1,6 @@
 <?php
 
+use App\Beurt;
 use App\Lifter;
 use Faker\Generator as Faker;
 
@@ -12,15 +13,35 @@ $factory->define(Lifter::class, function (Faker $faker) {
         'bodyweight'     => getRandomBodyweight(),
         'rekHoogteSquat' => getRandomRekhoogte(),
         'rekHoogteBench' => getRandomRekhoogte(),
-        'squat1'         => getRandomLift(),
-        'squat2'         => getRandomLift(),
-        'squat3'         => getRandomLift(),
-        'bench1'         => getRandomLift(),
-        'bench2'         => getRandomLift(),
-        'bench3'         => getRandomLift(),
-        'deadlift1'      => getRandomLift(),
-        'deadlift2'      => getRandomLift(),
-        'deadlift3'      => getRandomLift(),
+    ];
+});
+
+$factory->defineAs(Beurt::class, 'squat', function (Faker $faker) {
+    return [
+        'lift'        => 'squat',
+        'beurtnummer' => rand(1, 3),
+        'gewicht'     => getRandomGewicht(),
+        'gehaald'     => null,
+    ];
+});
+
+
+$factory->defineAs(Beurt::class, 'bench', function (Faker $faker) {
+    return [
+        'lift'        => 'bench',
+        'beurtnummer' => rand(1, 3),
+        'gewicht'     => getRandomGewicht(),
+        'gehaald'     => null,
+    ];
+});
+
+
+$factory->defineAs(Beurt::class, 'deadlift', function (Faker $faker) {
+    return [
+        'lift'        => 'deadlift',
+        'beurtnummer' => rand(1, 3),
+        'gewicht'     => getRandomGewicht(),
+        'gehaald'     => null,
     ];
 });
 
@@ -92,7 +113,7 @@ function getRandomRekhoogte()
     ]);
 }
 
-function getRandomLift(): ?float
+function getRandomGewicht(): ?float
 {
     return array_random([
         null,

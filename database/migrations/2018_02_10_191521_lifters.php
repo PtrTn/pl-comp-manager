@@ -22,15 +22,6 @@ class Lifters extends Migration
             $table->float('bodyweight')->nullable();
             $table->integer('rekHoogteSquat')->nullable();
             $table->integer('rekHoogteBench')->nullable();
-            $table->float('squat1')->nullable();
-            $table->float('squat2')->nullable();
-            $table->float('squat3')->nullable();
-            $table->float('bench1')->nullable();
-            $table->float('bench2')->nullable();
-            $table->float('bench3')->nullable();
-            $table->float('deadlift1')->nullable();
-            $table->float('deadlift2')->nullable();
-            $table->float('deadlift3')->nullable();
             $table->timestamps();
         });
     }

@@ -9,10 +9,6 @@
         <div class="row">
             <div class="col-md-12 col-xs-12">
                 <h1 class="display-4">Beginnerswedstrijd 2018</h1>
-
-                @if (count($lifters) == 0)
-                    <p>Er zijn geen lifters ingevoerd</p>
-                @else
                     <table class="table lifters">
                         <thead>
                         <tr>
@@ -39,9 +35,9 @@
                                 <td><a class="editable" href="#" data-type="text" data-name="bodyweight">{{ $lifter->bodyweight }}</a></td>
                                 <td><a class="editable" href="#" data-type="text" data-name="rekHoogteSquat">{{ $lifter->rekHoogteSquat }}</a></td>
                                 <td><a class="editable" href="#" data-type="text" data-name="rekHoogteBench">{{ $lifter->rekHoogteBench }}</a></td>
-                                <td><a class="editable" href="#" data-type="text" data-name="squat1">{{ $lifter->squat1 }}</a></td>
-                                <td><a class="editable" href="#" data-type="text" data-name="bench1">{{ $lifter->bench1 }}</a></td>
-                                <td><a class="editable" href="#" data-type="text" data-name="deadlift1">{{ $lifter->deadlift1 }}</a></td>
+                                <td><a class="editable" href="#" data-type="text" data-name="squat1">{{ $lifter->beurten->squat()->eerste()->gewicht() }}</a></td>
+                                <td><a class="editable" href="#" data-type="text" data-name="bench1">{{ $lifter->beurten->bench()->eerste()->gewicht() }}</a></td>
+                                <td><a class="editable" href="#" data-type="text" data-name="deadlift1">{{ $lifter->beurten->deadlift()->eerste()->gewicht() }}</a></td>
                                 <td><a href="{{ route('delete.lifter', $lifter) }}"><i class="fa fa-trash-o text-danger" aria-hidden="true"></i></a></td>
                             </tr>
                         @endforeach
@@ -50,7 +46,6 @@
                         </tr>
                         </tbody>
                     </table>
-                @endif
             </div>
         </div>
     </div>

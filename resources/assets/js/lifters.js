@@ -28,7 +28,7 @@ jQuery(document).ready(function () {
     $('.newLifter a').editable({
         type: 'text',
         name: 'naam',
-        emptytext: 'Klik om nog een lifter toe te voegen',
+        emptytext: 'Klik om een lifter toe te voegen',
     });
 
 
@@ -51,5 +51,3 @@ jQuery(document).ready(function () {
         });
     });
 });
-
-[{text: 'Vrouwen', children: ['47kg', '52kg', '57kg', '63kg', '72kg', '84kg', '+84kg']}]

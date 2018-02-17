@@ -26,7 +26,6 @@ jQuery(document).ready(function () {
             $nextEditable = $nextTd.find('a');
 
         $editable.editable({
-            type: 'text',
             pk: pk,
             url: '/api/lifter'
         });
@@ -41,7 +40,7 @@ jQuery(document).ready(function () {
     $('.newLifter a').editable({
         type: 'text',
         name: 'naam',
-        emptytext: 'Klik om nog een lifter toe te voegen'
+        emptytext: 'Klik om een lifter toe te voegen'
     });
 
     $('.newLifter a').on('hidden', function (e, reason) {

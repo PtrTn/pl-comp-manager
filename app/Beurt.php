@@ -14,6 +14,9 @@ class Beurt extends Model
         'gewicht',
         'gehaald',
     ];
+    protected $casts = [
+        'gehaald' => 'boolean'
+    ];
 
     public function newCollection(array $models = [])
     {

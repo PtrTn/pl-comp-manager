@@ -38,9 +38,4 @@ class BeurtenCollection extends Collection
     {
         return $this->where('beurtnummer', 4);
     }
-
-    public function gewicht()
-    {
-        return $this->first()->gewicht ?? null;
-    }
 }

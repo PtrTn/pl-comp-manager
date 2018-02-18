@@ -13073,6 +13073,16 @@ body {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
+.wedstrijd table td.success,
+.lifters table td.success {
+  background-color: #dff0d8;
+}
+
+.wedstrijd table td.danger,
+.lifters table td.danger {
+  background-color: #f2dede;
+}
+
 .wedstrijd table td form,
 .lifters table td form {
   display: inline-block;

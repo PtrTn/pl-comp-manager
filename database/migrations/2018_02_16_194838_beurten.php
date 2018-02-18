@@ -18,7 +18,7 @@ class Beurten extends Migration
             $table->integer('lifter_id');
             $table->string('lift');
             $table->integer('beurtnummer');
-            $table->string('gewicht')->nullable();
+            $table->float('gewicht')->nullable();
             $table->boolean('gehaald')->nullable();
             $table->timestamps();
         });

@@ -18,6 +18,11 @@ class Beurt extends Model
         'gehaald' => 'boolean'
     ];
 
+    public function lifter()
+    {
+        return $this->belongsTo(Lifter::class, 'lifter_id', 'id');
+    }
+
     public function newCollection(array $models = [])
     {
         return new BeurtenCollection($models);

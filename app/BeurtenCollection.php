@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Collection;
 
 class BeurtenCollection extends Collection
 {
+    public function nogNietGedaan()
+    {
+        return $this->where('gehaald', '===', null);
+    }
+
+    public function sorteerOpGewicht()
+    {
+        return $this->sortBy('gewicht');
+    }
+
     public function squat()
     {
         return $this->where('lift', 'squat');

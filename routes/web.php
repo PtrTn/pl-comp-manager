@@ -21,6 +21,11 @@ Route::get('/lifters', array(
     'uses' => 'LifterController@showLifters'
 ));
 
+Route::get('/scheidsrechter', array(
+    'as' => 'scheidsrechter',
+    'uses' => 'ScheidsrechterController@showWedstrijd'
+));
+
 Route::get('/lifter/delete/{lifter}', array(
     'as' => 'delete.lifter',
     'uses' => 'LifterController@deleteLifter'

@@ -16,7 +16,7 @@
             <div class="col-md-5 offset-md-2">
                 <h3>Upcoming</h3>
                 @foreach($volgendeBeurten as $volgendeBeurt)
-                    <p>{{ $volgendeBeurt->lifter->naam }} - {{ $volgendeBeurt->gewicht }}kg {{ $volgendeBeurt->lift }}</p>
+                    <p>{{ $volgendeBeurt->lifter->naam }} - {{ $volgendeBeurt->gewicht }}kg {{$volgendeBeurt->beurtnummer}}e {{ $volgendeBeurt->lift }}</p>
                 @endforeach
             </div>
         </div>

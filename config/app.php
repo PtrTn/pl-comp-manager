@@ -1,5 +1,8 @@
 <?php
 
+use Kris\LaravelFormBuilder\Facades\FormBuilder;
+use Kris\LaravelFormBuilder\FormBuilderServiceProvider;
+
 return [
 
     /*
@@ -160,6 +163,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Vendor providers
+         */
+        FormBuilderServiceProvider::class
     ],
 
     /*
@@ -209,6 +216,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /*
+         * Vendor aliasses
+         */
+        'FormBuilder' => FormBuilder::class,
     ],
 
 ];

@@ -16,9 +16,9 @@ class LiftersSeeder extends Seeder
         factory(Lifter::class, 10)
             ->create()
             ->each(function (Lifter $lifter) {
-                $lifter->beurten()->saveMany(factory(Beurt::class, 'squat', 3)->make());
-                $lifter->beurten()->saveMany(factory(Beurt::class, 'bench', 3)->make());
-                $lifter->beurten()->saveMany(factory(Beurt::class, 'deadlift', 3)->make());
+                $lifter->beurten()->saveMany(factory(Beurt::class, 'squat', 1)->make());
+                $lifter->beurten()->saveMany(factory(Beurt::class, 'bench', 1)->make());
+                $lifter->beurten()->saveMany(factory(Beurt::class, 'deadlift', 1)->make());
             })
             ->make();
     }

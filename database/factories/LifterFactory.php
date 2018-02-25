@@ -19,7 +19,7 @@ $factory->define(Lifter::class, function (Faker $faker) {
 $factory->defineAs(Beurt::class, 'squat', function (Faker $faker) {
     return [
         'lift'        => 'squat',
-        'beurtnummer' => rand(1, 3),
+        'beurtnummer' => 1,
         'gewicht'     => getRandomGewicht(),
         'gehaald'     => getRandomGehaald(),
     ];
@@ -29,7 +29,7 @@ $factory->defineAs(Beurt::class, 'squat', function (Faker $faker) {
 $factory->defineAs(Beurt::class, 'bench', function (Faker $faker) {
     return [
         'lift'        => 'bench',
-        'beurtnummer' => rand(1, 3),
+        'beurtnummer' => 1,
         'gewicht'     => getRandomGewicht(),
         'gehaald'     => getRandomGehaald(),
     ];
@@ -39,7 +39,7 @@ $factory->defineAs(Beurt::class, 'bench', function (Faker $faker) {
 $factory->defineAs(Beurt::class, 'deadlift', function (Faker $faker) {
     return [
         'lift'        => 'deadlift',
-        'beurtnummer' => rand(1, 3),
+        'beurtnummer' => 1,
         'gewicht'     => getRandomGewicht(),
         'gehaald'     => getRandomGehaald(),
     ];

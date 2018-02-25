@@ -26,6 +26,11 @@ Route::get('/scheidsrechter', array(
     'uses' => 'ScheidsrechterController@showWedstrijd'
 ));
 
+Route::post('/scheidsrechter/next', array(
+    'as' => 'scheidsrechter.approveLift',
+    'uses' => 'ScheidsrechterController@approveLift'
+));
+
 Route::get('/lifter/delete/{lifter}', array(
     'as' => 'delete.lifter',
     'uses' => 'LifterController@deleteLifter'

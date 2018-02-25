@@ -12,6 +12,7 @@
                 <h2>{{ $volgendeBeurt->lifter->naam }}</h2>
                 <p>{{ $volgendeBeurt->beurtnummer }}e beurt</p>
                 <p>{{ $volgendeBeurt->gewicht }}kg {{ $volgendeBeurt->lift }}</p>
+                {!! form($form) !!}
             </div>
             <div class="col-md-5 offset-md-2">
                 <h3>Upcoming</h3>

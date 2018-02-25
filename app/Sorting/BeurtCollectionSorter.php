@@ -21,7 +21,7 @@ class BeurtCollectionSorter
         $this->sorters = $sorters;
     }
 
-    public function sort(BeurtenCollection $collection)
+    public function sort(BeurtenCollection $collection): BeurtenCollection
     {
         return $collection->sort(function (Beurt $a, Beurt $b) {
             foreach ($this->sorters as $sorter) {

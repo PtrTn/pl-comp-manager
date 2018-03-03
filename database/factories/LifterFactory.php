@@ -21,7 +21,7 @@ $factory->defineAs(Beurt::class, 'squat', function (Faker $faker) {
         'lift'        => 'squat',
         'beurtnummer' => 1,
         'gewicht'     => getRandomGewicht(),
-        'gehaald'     => getRandomGehaald(),
+        'gehaald'     => null,
     ];
 });
 
@@ -31,7 +31,7 @@ $factory->defineAs(Beurt::class, 'bench', function (Faker $faker) {
         'lift'        => 'bench',
         'beurtnummer' => 1,
         'gewicht'     => getRandomGewicht(),
-        'gehaald'     => getRandomGehaald(),
+        'gehaald'     => null,
     ];
 });
 
@@ -41,7 +41,7 @@ $factory->defineAs(Beurt::class, 'deadlift', function (Faker $faker) {
         'lift'        => 'deadlift',
         'beurtnummer' => 1,
         'gewicht'     => getRandomGewicht(),
-        'gehaald'     => getRandomGehaald(),
+        'gehaald'     => null,
     ];
 });
 
@@ -123,15 +123,5 @@ function getRandomGewicht(): ?float
         160,
         200,
         300
-    ]);
-}
-
-
-function getRandomGehaald(): ?float
-{
-    return array_random([
-        null,
-        true,
-        false,
     ]);
 }

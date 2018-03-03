@@ -18,3 +18,8 @@
 10. Visit the configured website url `/lifters` or `/wedstrijd`
 11. ???
 12. Profit
+
+# Todo
+- Ondersteuning voor meerdere flights
+- Nullable lifts
+- Beurten corrigeren

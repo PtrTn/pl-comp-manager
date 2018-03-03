@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Lifter;
 use Illuminate\Http\Request;
 
-class LifterApiController extends Controller
+class OrganisatieApiController extends Controller
 {
     public function updateLifter(Request $request)
     {

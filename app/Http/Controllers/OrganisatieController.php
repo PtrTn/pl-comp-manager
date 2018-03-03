@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Lifter;
 
-class LifterController extends Controller
+class OrganisatieController extends Controller
 {
     public function showLifters()
     {
         $lifters = Lifter::all();
         
         return View(
-            'lifters',
+            'organisatie',
             [
                 'lifters' => $lifters
             ]

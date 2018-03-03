@@ -24,9 +24,9 @@ Route::post('/lift', array(
 
 Route::post('/lifter', array(
     'as' => 'lifter',
-    'uses' => 'LifterApiController@updateLifter'
+    'uses' => 'OrganisatieApiController@updateLifter'
 ));
 Route::post('/lifter/add', array(
     'as' => 'add.lifter',
-    'uses' => 'LifterApiController@addLifter'
+    'uses' => 'OrganisatieApiController@addLifter'
 ));

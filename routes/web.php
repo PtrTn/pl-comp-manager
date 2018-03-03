@@ -16,14 +16,14 @@ Route::get('/wedstrijd', array(
     'uses' => 'WedstrijdController@showLifts'
 ));
 
-Route::get('/lifters', array(
-    'as' => 'lifters',
-    'uses' => 'LifterController@showLifters'
+Route::get('/organisatie', array(
+    'as' => 'organisatie',
+    'uses' => 'OrganisatieController@showLifters'
 ));
 
-Route::get('/lifter/delete/{lifter}', array(
+Route::get('/organisatie/delete/{lifter}', array(
     'as' => 'delete.lifter',
-    'uses' => 'LifterController@deleteLifter'
+    'uses' => 'OrganisatieController@deleteLifter'
 ));
 
 Route::get('/scheidsrechter', array(

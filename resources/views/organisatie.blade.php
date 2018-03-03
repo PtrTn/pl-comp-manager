@@ -8,7 +8,7 @@
     <div class="wedstrijd">
         <div class="row">
             <div class="col-md-12 col-xs-12">
-                <p>Vul hieronder de gegevens van alle lifters in, voordat de wedstrijd begint.</p>
+                <p>Hieronder kan de organisatie de gegevens van alle lifters invullen voordat de wedstrijd begint.</p>
                 <table class="table lifters">
                     <thead>
                     <tr>

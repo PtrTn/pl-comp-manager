@@ -36,15 +36,15 @@
                     @foreach ($lifters as $lifter)
                         <tr data-pk="{{ $lifter->id }}">
                             <td>{{ $lifter->naam }}</td>
-                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->eerste()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->tweede()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->derde()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->eerste()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->tweede()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->derde()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->eerste()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->tweede()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->derde()->first()])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->eerste()->first(), 'lift' => 'squat1'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->tweede()->first(), 'lift' => 'squat2'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->derde()->first(), 'lift' => 'squat3'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->eerste()->first(), 'lift' => 'bench1'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->tweede()->first(), 'lift' => 'bench2'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->derde()->first(), 'lift' => 'bench3'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->eerste()->first(), 'lift' => 'deadlift1'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->tweede()->first(), 'lift' => 'deadlift2'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->derde()->first(), 'lift' => 'deadlift3'])@endcomponent
                         </tr>
                     @endforeach
                     </tbody>

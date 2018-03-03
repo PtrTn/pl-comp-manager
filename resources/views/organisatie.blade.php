@@ -37,9 +37,9 @@
                             <td><a class="editable" href="#" data-type="text" data-name="bodyweight">{{ $lifter->bodyweight }}</a></td>
                             <td><a class="editable" href="#" data-type="text" data-name="rekHoogteSquat">{{ $lifter->rekHoogteSquat }}</a></td>
                             <td><a class="editable" href="#" data-type="text" data-name="rekHoogteBench">{{ $lifter->rekHoogteBench }}</a></td>
-                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->eerste()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->eerste()->first()])@endcomponent
-                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->eerste()->first()])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->squat()->eerste()->first(), 'lift' => 'squat1'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->bench()->eerste()->first(), 'lift' => 'bench1'])@endcomponent
+                            @component('components.beurt', ['beurt' => $lifter->beurten->deadlift()->eerste()->first(), 'lift' => 'deadlift1'])@endcomponent
                             <td><a href="{{ route('delete.lifter', $lifter) }}"><i class="fa fa-trash-o text-danger" aria-hidden="true"></i></a></td>
                         </tr>
                     @endforeach

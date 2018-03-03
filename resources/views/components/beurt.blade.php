@@ -12,4 +12,4 @@ if (isset($beurt)) {
 }
 @endphp
 
-<td class="{{ $class }}"><a class="editable" href="#" data-name="squat1">{{$gewicht}}</a></td>
+<td class="{{ $class }}"><a class="editable" href="#" data-name="{{ $lift }}">{{$gewicht}}</a></td>

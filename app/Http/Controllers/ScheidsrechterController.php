@@ -36,9 +36,9 @@ class ScheidsrechterController extends Controller
             'scheidsrechter',
             [
                 'form' => $form,
-                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3),
+                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3)->reverse(),
                 'volgendeBeurt' => $beurten->first(),
-                'volgendeBeurten' => $beurten->slice(1, 5)
+                'volgendeBeurten' => $beurten->slice(0, 5)->reverse()
             ]
         );
     }
@@ -74,9 +74,9 @@ class ScheidsrechterController extends Controller
             'scheidsrechter',
             [
                 'form' => $form,
-                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3),
-                'volgendeBeurt' => $beurten->slice(1, 1)->first(),
-                'volgendeBeurten' => $beurten->slice(2, 5)
+                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3)->reverse(),
+                'volgendeBeurt' => $beurten->slice(1,1)->first(),
+                'volgendeBeurten' => $beurten->slice(1, 5)->reverse()
             ]
         );
     }

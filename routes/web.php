@@ -26,7 +26,7 @@ Route::get('/scheidsrechter', array(
     'uses' => 'ScheidsrechterController@showWedstrijd'
 ));
 
-Route::post('/scheidsrechter/next', array(
+Route::post('/scheidsrechter', array(
     'as' => 'scheidsrechter.approveLift',
     'uses' => 'ScheidsrechterController@approveLift'
 ));

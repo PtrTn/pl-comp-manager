@@ -24,7 +24,8 @@
                 <h3>Beurtenoverzicht</h3>
                 <ul class="list-group">
                 @foreach($volgendeBeurten as $volgendeBeurt)
-                    <li class="list-group-item @if($loop->last)list-group-item-primary @endif">
+                    <li class="list-group-item">
+                        @if($loop->last)<i class="fa fa-arrow-right"></i> @endif
                         {{ $volgendeBeurt->lifter->naam }} {{ $volgendeBeurt->gewicht }}kg {{$volgendeBeurt->beurtnummer}}e {{ $volgendeBeurt->lift }}
                     </li>
                 @endforeach

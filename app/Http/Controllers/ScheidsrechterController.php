@@ -54,31 +54,18 @@ class ScheidsrechterController extends Controller
             return redirect()->back()->withErrors($form->getErrors())->withInput();
         }
 
-        $beurten = $this->getVolgendeBeurten();
-
-
-        $vorigeBeurt = $beurten->first();
         $formValue = $request->request->get('gehaald');
         $gehaald = false;
         if ($formValue === 'approved') {
             $gehaald = true;
         }
+
+        $vorigeBeurt = $this->getVolgendeBeurten()->first();
         $vorigeBeurt->update([
             'gehaald' => $gehaald
         ]);
 
-        $vorigeBeurten = $this->getVorigeBeurten();
-
-        // Handle next.
-        return View(
-            'scheidsrechter',
-            [
-                'form' => $form,
-                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3)->reverse(),
-                'volgendeBeurt' => $beurten->slice(1,1)->first(),
-                'volgendeBeurten' => $beurten->slice(1, 5)->reverse()
-            ]
-        );
+        return redirect()->to('scheidsrechter');
     }
 
     private function getVolgendeBeurten(): BeurtenCollection

@@ -21,6 +21,11 @@ Route::get('/lifters', array(
     'uses' => 'LifterController@showLifters'
 ));
 
+Route::get('/lifter/delete/{lifter}', array(
+    'as' => 'delete.lifter',
+    'uses' => 'LifterController@deleteLifter'
+));
+
 Route::get('/scheidsrechter', array(
     'as' => 'scheidsrechter',
     'uses' => 'ScheidsrechterController@showWedstrijd'
@@ -31,7 +36,7 @@ Route::post('/scheidsrechter', array(
     'uses' => 'ScheidsrechterController@approveLift'
 ));
 
-Route::get('/lifter/delete/{lifter}', array(
-    'as' => 'delete.lifter',
-    'uses' => 'LifterController@deleteLifter'
+Route::get('/laders', array(
+    'as' => 'laders',
+    'uses' => 'LadersController@showWedstrijd'
 ));

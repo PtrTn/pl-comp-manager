@@ -13056,12 +13056,12 @@ body {
 }
 
 .wedstrijd table,
-.lifters table {
+.organisatie table {
   text-align: center;
 }
 
 .wedstrijd table td,
-.lifters table td {
+.organisatie table td {
   vertical-align: middle;
   height: 60px;
   width: 70px;
@@ -13069,46 +13069,46 @@ body {
 }
 
 .wedstrijd table td:hover,
-.lifters table td:hover {
+.organisatie table td:hover {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
 .wedstrijd table td.success,
-.lifters table td.success {
+.organisatie table td.success {
   background-color: #dff0d8;
 }
 
 .wedstrijd table td.danger,
-.lifters table td.danger {
+.organisatie table td.danger {
   background-color: #f2dede;
 }
 
 .wedstrijd table td form,
-.lifters table td form {
+.organisatie table td form {
   display: inline-block;
   margin: auto;
 }
 
 .wedstrijd table td a,
-.lifters table td a {
+.organisatie table td a {
   display: block;
   padding: 0.75rem;
 }
 
 .wedstrijd table td a:hover,
-.lifters table td a:hover {
+.organisatie table td a:hover {
   text-decoration: none;
 }
 
 .wedstrijd table td input,
-.lifters table td input {
+.organisatie table td input {
   width: 45px !important;
   padding: 5px !important;
   text-align: center;
 }
 
 .wedstrijd table td.autoWidth input,
-.lifters table td.autoWidth input {
+.organisatie table td.autoWidth input {
   width: auto !important;
 }
 
@@ -13210,5 +13210,9 @@ body {
   height: 60px;
   background-color: gray;
   border-radius: 3px;
+}
+
+.scheidsrechter .beurten p.active {
+  margin-left: -17px;
 }
 

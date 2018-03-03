@@ -7,11 +7,11 @@
 @endsection
 
 @section('content')
-    <div class="lifters">
+    <div class="wedstrijd">
         <div class="row ">
             <div class="col-md-12 col-xs-12">
                 <p>Hieronder kunnen de lifts gedurende de wedstrijd bijgewerkt worden door de wedstrijdleiding.</p>
-                <table class="table lifters">
+                <table class="table organisatie">
                     <thead>
                     <tr>
                         <th scope="colgroup">Naam</th>

@@ -16,7 +16,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
 }
 
-.wedstrijd, .lifters {
+.wedstrijd, .organisatie {
   table {
     text-align: center;
 
@@ -136,6 +136,14 @@ html, body {
       height: 60px;
       background-color: gray;
       border-radius: 3px;
+    }
+  }
+}
+
+.scheidsrechter {
+  .beurten {
+    p.active {
+      margin-left: -17px;
     }
   }
 }

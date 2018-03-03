@@ -29,23 +29,19 @@ class LadersController extends Controller
     public function showWedstrijd()
     {
         $beurten = $this->getVolgendeBeurten();
-
-        $vorigeBeurten = $this->getVorigeBeurten();
-
-        $volgendeBeurt = $beurten->first();
+        $huidigeBeurt = $beurten->first();
 
         $plates = null;
-        if ($volgendeBeurt !== null) {
-            $plates = $this->calculator->getPlatesForWeight($volgendeBeurt->gewicht);
+        if ($huidigeBeurt !== null) {
+            $plates = $this->calculator->getPlatesForWeight($huidigeBeurt->gewicht);
         }
 
         return View(
             'laders',
             [
-                'vorigeBeurten'   => $vorigeBeurten->slice(-3, 3),
-                'volgendeBeurt'   => $volgendeBeurt,
-                'volgendeBeurten' => $beurten->slice(1, 5),
-                'plates'          => $plates,
+                'huidigeBeurt'  => $huidigeBeurt,
+                'volgendeBeurt' => $beurten->slice(1, 1)->first(),
+                'plates'        => $plates,
             ]
         );
     }
@@ -54,15 +50,6 @@ class LadersController extends Controller
     {
         $beurten = Beurt::where('gewicht', '!=', null)
             ->whereNull('gehaald')
-            ->get();
-
-        return $this->sorter->sort($beurten);
-    }
-
-    private function getVorigeBeurten(): BeurtenCollection
-    {
-        $beurten = Beurt::where('gewicht', '!=', null)
-            ->whereNotNull('gehaald')
             ->get();
 
         return $this->sorter->sort($beurten);

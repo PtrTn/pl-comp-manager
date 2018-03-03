@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <p>De wedstrijdleiding kan dit scherm gebruiken om aan te geven hoe de scheidsrechter(s) hebben geoordeeld over de huidige beurt.</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 @if($huidigeBeurt)
                     <h1>{{ $huidigeBeurt->lifter->naam }}</h1>
                     <h2>{{ $huidigeBeurt->gewicht }}kg {{ $huidigeBeurt->lift }}</h2>
@@ -20,7 +20,7 @@
                     <h3>Er zijn geen volgende lifters</h3>
                 @endif
             </div>
-            <div class="col-md-5 offset-md-2 beurten">
+            <div class="col-md-5 offset-md-1 beurten mt-5 mt-md-0">
                 <h3>Beurtenoverzicht</h3>
                 <ul class="list-group">
                 @foreach($volgendeBeurten as $volgendeBeurt)

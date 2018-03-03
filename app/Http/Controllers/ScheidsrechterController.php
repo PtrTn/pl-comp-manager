@@ -37,7 +37,7 @@ class ScheidsrechterController extends Controller
             [
                 'form' => $form,
                 'vorigeBeurten' => $vorigeBeurten->slice(-3, 3)->reverse(),
-                'volgendeBeurt' => $beurten->first(),
+                'huidigeBeurt' => $beurten->first(),
                 'volgendeBeurten' => $beurten->slice(0, 5)->reverse()
             ]
         );

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Beurt;
 use App\BeurtenCollection;
 use App\Sorting\BeurtCollectionSorter;
+use App\Weights\PlateCalculator;
 
 class LadersController extends Controller
 {
@@ -12,10 +13,17 @@ class LadersController extends Controller
      * @var BeurtCollectionSorter
      */
     private $sorter;
+    /**
+     * @var PlateCalculator
+     */
+    private $calculator;
 
-    public function __construct(BeurtCollectionSorter $sorter)
-    {
+    public function __construct(
+        BeurtCollectionSorter $sorter,
+        PlateCalculator $calculator
+    ) {
         $this->sorter = $sorter;
+        $this->calculator = $calculator;
     }
 
     public function showWedstrijd()
@@ -24,12 +32,20 @@ class LadersController extends Controller
 
         $vorigeBeurten = $this->getVorigeBeurten();
 
+        $volgendeBeurt = $beurten->first();
+
+        $plates = null;
+        if ($volgendeBeurt !== null) {
+            $plates = $this->calculator->getPlatesForWeight($volgendeBeurt->gewicht);
+        }
+
         return View(
             'laders',
             [
-                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3),
-                'volgendeBeurt' => $beurten->first(),
-                'volgendeBeurten' => $beurten->slice(1, 5)
+                'vorigeBeurten'   => $vorigeBeurten->slice(-3, 3),
+                'volgendeBeurt'   => $volgendeBeurt,
+                'volgendeBeurten' => $beurten->slice(1, 5),
+                'plates'          => $plates,
             ]
         );
     }

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="laders">
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-md-12">
                 @if($volgendeBeurt)
                     <h1 class="display-1">{{ $volgendeBeurt->gewicht }}kg {{ $volgendeBeurt->lift }}</h1>

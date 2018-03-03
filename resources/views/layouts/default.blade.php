@@ -20,6 +20,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <div class="container">
+        <div class="navbar-nav">
+            <a class="nav-link @if (Request::is('lifters')) active @endif" href="{{ route('lifters') }}">Lifters</a>
+            <a class="nav-link @if (Request::is('wedstrijd')) active @endif" href="{{ route('wedstrijd') }}">Wedstrijd</a>
+            <a class="nav-link @if (Request::is('scheidsrechter')) active @endif" href="{{ route('scheidsrechter') }}">Scheidsrechter</a>
+            <a class="nav-link @if (Request::is('laders')) active @endif" href="{{ route('laders') }}">Laders</a>
+        </div>
+        <span class="navbar-text">Powered by SCC Powerhouse ©</span>
+    </div>
+</nav>
 <div class="container">
     @yield('content')
 </div>

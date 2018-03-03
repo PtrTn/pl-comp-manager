@@ -117,11 +117,19 @@ function getRandomGewicht(): ?float
 {
     return array_random([
         null,
+        null,
+        null,
+        80,
+        82.5,
+        97.5,
         100,
         120,
+        135,
         140,
         160,
+        190,
         200,
+        240,
         300
     ]);
 }

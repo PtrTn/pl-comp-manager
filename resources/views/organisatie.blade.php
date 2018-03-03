@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12 col-xs-12">
                 <p>Hieronder kan de organisatie de gegevens van alle lifters invullen voordat de wedstrijd begint.</p>
-                <table class="table organisatie">
+                <table class="table lifters">
                     <thead>
                     <tr>
                         <th scope="col">Lot #</th>

@@ -13055,60 +13055,60 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-.wedstrijd table,
-.organisatie table {
+.wedstrijd table.lifters,
+.organisatie table.lifters {
   text-align: center;
 }
 
-.wedstrijd table td,
-.organisatie table td {
+.wedstrijd table.lifters td,
+.organisatie table.lifters td {
   vertical-align: middle;
   height: 60px;
   width: 70px;
   padding: 0;
 }
 
-.wedstrijd table td:hover,
-.organisatie table td:hover {
+.wedstrijd table.lifters td:hover,
+.organisatie table.lifters td:hover {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
-.wedstrijd table td.success,
-.organisatie table td.success {
+.wedstrijd table.lifters td.success,
+.organisatie table.lifters td.success {
   background-color: #dff0d8;
 }
 
-.wedstrijd table td.danger,
-.organisatie table td.danger {
+.wedstrijd table.lifters td.danger,
+.organisatie table.lifters td.danger {
   background-color: #f2dede;
 }
 
-.wedstrijd table td form,
-.organisatie table td form {
+.wedstrijd table.lifters td form,
+.organisatie table.lifters td form {
   display: inline-block;
   margin: auto;
 }
 
-.wedstrijd table td a,
-.organisatie table td a {
+.wedstrijd table.lifters td a,
+.organisatie table.lifters td a {
   display: block;
   padding: 0.75rem;
 }
 
-.wedstrijd table td a:hover,
-.organisatie table td a:hover {
+.wedstrijd table.lifters td a:hover,
+.organisatie table.lifters td a:hover {
   text-decoration: none;
 }
 
-.wedstrijd table td input,
-.organisatie table td input {
+.wedstrijd table.lifters td input,
+.organisatie table.lifters td input {
   width: 45px !important;
   padding: 5px !important;
   text-align: center;
 }
 
-.wedstrijd table td.autoWidth input,
-.organisatie table td.autoWidth input {
+.wedstrijd table.lifters td.autoWidth input,
+.organisatie table.lifters td.autoWidth input {
   width: auto !important;
 }
 

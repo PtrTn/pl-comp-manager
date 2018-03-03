@@ -11,7 +11,7 @@
         <div class="row ">
             <div class="col-md-12 col-xs-12">
                 <p>Hieronder kunnen de lifts gedurende de wedstrijd bijgewerkt worden door de wedstrijdleiding.</p>
-                <table class="table organisatie">
+                <table class="table lifters">
                     <thead>
                     <tr>
                         <th scope="colgroup">Naam</th>

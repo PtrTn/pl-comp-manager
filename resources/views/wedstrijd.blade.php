@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Wedstrijd')
+
 @section('scripts')
     <script src="{{ asset('js/wedstrijd.js') }}"></script>
 @endsection

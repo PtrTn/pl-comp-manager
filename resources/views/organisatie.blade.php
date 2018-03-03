@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Organisatie')
+
 @section('scripts')
     <script src="{{ asset('js/lifters.js') }}"></script>
 @endsection

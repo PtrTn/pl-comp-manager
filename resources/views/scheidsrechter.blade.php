@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Scheidsrechter')
+
 @section('content')
     <div class="wedstrijd">
         <div class="row">

@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
+@section('title', 'Laders')
+
 @section('content')
     <div class="laders">
         <div class="row">

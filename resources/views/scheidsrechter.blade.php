@@ -17,7 +17,7 @@
                         {!! form($form) !!}
                     </div>
                 @else
-                    <p>Er zijn geen volgende lifters</p>
+                    <h3>Er zijn geen volgende lifters</h3>
                 @endif
             </div>
             <div class="col-md-5 offset-md-2 beurten">

@@ -22,7 +22,7 @@ class ScheidsrechterForm extends Form
                 'attr' => [
                     'name' => 'gehaald',
                     'value' => 'approved',
-                    'class' => 'btn btn-lg btn-success',
+                    'class' => 'btn btn-lg btn-success ml-5',
                 ],
             ]);
     }

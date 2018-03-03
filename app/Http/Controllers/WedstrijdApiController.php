@@ -33,7 +33,7 @@ class WedstrijdApiController extends Controller
             ]);
             $beurt->update([
                 'gewicht' => $value,
-                'gehaald' => false,
+                'gehaald' => null,
             ]);
             $lifter->beurten()->save($beurt);
             return response()->json([]);

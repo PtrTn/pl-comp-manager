@@ -3,7 +3,7 @@
 @section('title', 'Organisatie')
 
 @section('scripts')
-    <script src="{{ asset('js/lifters.js') }}"></script>
+    <script src="{{ asset('js/organisatie.js') }}"></script>
 @endsection
 
 @section('content')

@@ -24,6 +24,6 @@ mix.webpackConfig({
 mix
     .js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/wedstrijd.js', 'public/js')
-    .js('resources/assets/js/lifters.js', 'public/js')
+    .js('resources/assets/js/organisatie.js', 'public/js')
     .extract(['jquery', 'bootstrap-editable'])
     .sass('resources/assets/sass/app.scss', 'public/css');

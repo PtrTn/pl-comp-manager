@@ -28,12 +28,15 @@ class ScheidsrechterController extends Controller
             'url'    => route('scheidsrechter.approveLift')
         ]);
 
-        $beurten = $this->getUpcomingBeurten();
+        $beurten = $this->getVolgendeBeurten();
+
+        $vorigeBeurten = $this->getVorigeBeurten();
 
         return View(
             'scheidsrechter',
             [
                 'form' => $form,
+                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3),
                 'volgendeBeurt' => $beurten->first(),
                 'volgendeBeurten' => $beurten->slice(1, 5)
             ]
@@ -51,7 +54,7 @@ class ScheidsrechterController extends Controller
             return redirect()->back()->withErrors($form->getErrors())->withInput();
         }
 
-        $beurten = $this->getUpcomingBeurten();
+        $beurten = $this->getVolgendeBeurten();
 
 
         $vorigeBeurt = $beurten->first();
@@ -64,21 +67,33 @@ class ScheidsrechterController extends Controller
             'gehaald' => $gehaald
         ]);
 
+        $vorigeBeurten = $this->getVorigeBeurten();
+
         // Handle next.
         return View(
             'scheidsrechter',
             [
                 'form' => $form,
+                'vorigeBeurten' => $vorigeBeurten->slice(-3, 3),
                 'volgendeBeurt' => $beurten->slice(1, 1)->first(),
                 'volgendeBeurten' => $beurten->slice(2, 5)
             ]
         );
     }
 
-    private function getUpcomingBeurten(): BeurtenCollection
+    private function getVolgendeBeurten(): BeurtenCollection
     {
         $beurten = Beurt::where('gewicht', '!=', null)
             ->whereNull('gehaald')
+            ->get();
+
+        return $this->sorter->sort($beurten);
+    }
+
+    private function getVorigeBeurten(): BeurtenCollection
+    {
+        $beurten = Beurt::where('gewicht', '!=', null)
+            ->whereNotNull('gehaald')
             ->get();
 
         return $this->sorter->sort($beurten);

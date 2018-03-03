@@ -4,6 +4,7 @@
     <div class="laders">
         <div class="row">
             <div class="col-md-12">
+                <p>In dit scherm kunnen de laders zien welke gewichten er op geladen moeten worden en welke rekhoogte ingesteld dient te worden.</p>
                 @if($volgendeBeurt)
                     <h1 class="display-1">{{ $volgendeBeurt->gewicht }}kg {{ $volgendeBeurt->lift }}</h1>
                     <h1 class="display-4">{{ $volgendeBeurt->lifter->naam }}</h1>

@@ -24,7 +24,7 @@
     <div class="container">
         <div class="navbar-nav">
             <a class="nav-link @if (Request::is('lifters')) active @endif" href="{{ route('lifters') }}">Lifters</a>
-            <a class="nav-link @if (Request::is('wedstrijd')) active @endif" href="{{ route('wedstrijd') }}">Wedstrijd</a>
+            <a class="nav-link @if (Request::is('wedstrijd')) active @endif" href="{{ route('wedstrijd') }}">Wedstrijdleiding</a>
             <a class="nav-link @if (Request::is('scheidsrechter')) active @endif" href="{{ route('scheidsrechter') }}">Scheidsrechter</a>
             <a class="nav-link @if (Request::is('laders')) active @endif" href="{{ route('laders') }}">Laders</a>
         </div>

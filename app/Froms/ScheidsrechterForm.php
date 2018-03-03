@@ -14,7 +14,7 @@ class ScheidsrechterForm extends Form
                 'attr' => [
                     'name' => 'gehaald',
                     'value' => 'disapproved',
-                    'class' => 'btn btn-danger',
+                    'class' => 'btn btn-lg btn-danger',
                 ],
             ])
             ->add('approved', 'submit', [
@@ -22,7 +22,7 @@ class ScheidsrechterForm extends Form
                 'attr' => [
                     'name' => 'gehaald',
                     'value' => 'approved',
-                    'class' => 'btn btn-success',
+                    'class' => 'btn btn-lg btn-success',
                 ],
             ]);
     }

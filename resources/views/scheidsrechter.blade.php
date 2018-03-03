@@ -2,8 +2,10 @@
 
 @section('content')
     <div class="wedstrijd">
-        <h1 class="display-4">Beginnerswedstrijd 2018</h1>
         <div class="row">
+            <div class="col-md-12">
+                <p>De wedstrijdleiding kan dit scherm gebruiken om aan te geven hoe de scheidsrechter(s) hebben geoordeeld over de huidige beurt.</p>
+            </div>
             <div class="col-md-5">
                 @if($volgendeBeurt)
                     <h2>{{ $volgendeBeurt->lifter->naam }}</h2>

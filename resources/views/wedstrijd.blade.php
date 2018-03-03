@@ -8,7 +8,7 @@
     <div class="lifters">
         <div class="row ">
             <div class="col-md-12 col-xs-12">
-                <h1 class="display-4">Beginnerswedstrijd 2018</h1>
+                <p>Hieronder kunnen de lifts gedurende de wedstrijd bijgewerkt worden door de wedstrijdleiding.</p>
                 <table class="table lifters">
                     <thead>
                     <tr>
